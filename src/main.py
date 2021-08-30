@@ -86,7 +86,7 @@ async def mia(text: Optional[str]=None):
 		with open("font.ttf","rb") as font:
 			font.close()
 	except Exception:
-		font = requests.get("https://firebasestorage.googleapis.com/v0/b/predit-f5df7.appspot.com/o/whatever%20it%20takes.ttf?alt=media&token=9cfbc822-124c-46e7-8f84-c53946a6583b")
+		font = requests.get("https://firebasestorage.googleapis.com/v0/b/predit-f5df7.appspot.com/o/font.ttf?alt=media&token=cf309e4a-b273-4598-9dba-c24ab9a0a889")
 		with open('font.ttf', 'wb') as f:
 			f.write(font.content)
 			f.close()
