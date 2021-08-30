@@ -91,7 +91,7 @@ async def mia(text: Optional[str]=None):
 			f.write(font.content)
 			f.close()
 
-	font = ImageFont.truetype("font.ttf", 18)
+	font = ImageFont.truetype("font.ttf", 20)
 	lines = textwrap.wrap(text, width=60)
 	if len(lines) > 1:
 		draw.text((15, 62),"Only 60 character Allow.",fill="#604af0",font=font)
