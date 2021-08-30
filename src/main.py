@@ -76,11 +76,11 @@ async def mia(text: Optional[str]=None):
 	try:
 		img = Image.open("./mis.png")
 	except Exception:
-		mis = requests.get("https://firebasestorage.googleapis.com/v0/b/predit-f5df7.appspot.com/o/mis.png?alt=media&token=d451e77b-6fd3-4eb3-9a45-059ff6929c39")
-		with open("mis.png","wb") as f:
-			f.write(mis.content)
+		miss = requests.get("https://firebasestorage.googleapis.com/v0/b/predit-f5df7.appspot.com/o/miss.jpg?alt=media&token=0445bac4-4587-4fe4-814f-3e72e81ac661")
+		with open("miss.jpg","wb") as f:
+			f.write(miss.content)
 			f.close()
-	img = Image.open("./mis.png")
+	img = Image.open("./miss.jpg")
 	draw = ImageDraw.Draw(img)
 	try:
 		with open("font.ttf","rb") as font:
