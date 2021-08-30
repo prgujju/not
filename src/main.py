@@ -87,11 +87,11 @@ async def mia(text: Optional[str]=None):
 			font.close()
 	except Exception:
 		font = requests.get("https://firebasestorage.googleapis.com/v0/b/predit-f5df7.appspot.com/o/whatever%20it%20takes.ttf?alt=media&token=9cfbc822-124c-46e7-8f84-c53946a6583b")
-		with open('take.ttf', 'wb') as f:
-			f.write(take.content)
+		with open('font.ttf', 'wb') as f:
+			f.write(font.content)
 			f.close()
 
-	font = ImageFont.truetype("take.ttf", 18)
+	font = ImageFont.truetype("font.ttf", 18)
 	lines = textwrap.wrap(text, width=60)
 	if len(lines) > 1:
 		draw.text((15, 62),"Only 60 character Allow.",fill="#604af0",font=font)
