@@ -46,7 +46,7 @@ async def modi(text: Optional[str]=None,url: Optional[str]=None):
 	try:
 		img = Image.open("./blank.png")
 	except Exception:
-		blank = requests.get("url")
+		blank = requests.get(url)
 		with open("blank.png","wb") as f:
 			f.write(blank.content)
 			f.close()
