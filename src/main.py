@@ -41,8 +41,8 @@ app.add_middleware(
 
 
 @app.get("/modi",response_class=FileResponse,tags=["Fake Modi Tweet"])
-async def modi(text: Optional[str]=None):
-	async def modi(url: Optional[str]=None):
+async def modi(text: Optional[str]=None,url: Optional[str]=None):
+
 	try:
 		img = Image.open("./blank.png")
 	except Exception:
