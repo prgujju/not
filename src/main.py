@@ -62,10 +62,11 @@ async def modi(text: Optional[str]=None,url: Optional[str]=None):
 			f.close()
 
 	font = ImageFont.truetype("font.ttf", 18)
-	lines = textwrap.wrap(url, width=60)
+	lines = textwrap.wrap(text, width=60)
 	if len(lines) > 1:
 		draw.text((15, 62),"Only 60 character Allow.",fill="#604af0",font=font)
 	else:
+		draw.text((15, 57),text,fill="#14171a",font=font)
 		draw.text((15, 57),url,fill="#14171a",font=font)
 	img.save("hi.png")
 	file_like = open("./hi.png", mode="rb")
