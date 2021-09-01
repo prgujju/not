@@ -44,7 +44,7 @@ app.add_middleware(
 async def modi(text: Optional[str]=None,url: Optional[str]=None):
 
 	try:
-		img = Image.open("./blank.png")
+		img = Image.open("./mis.png")
 	except Exception:
 		blank = requests.get(url)
 		with open("blank.png","wb") as f:
