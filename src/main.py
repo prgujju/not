@@ -42,6 +42,7 @@ app.add_middleware(
 
 @app.get("/modi",response_class=FileResponse,tags=["Fake Modi Tweet"])
 async def modi(text: Optional[str]=None):
+	async def modi(url: Optional[str]=None):
 	try:
 		img = Image.open("./blank.png")
 	except Exception:
@@ -61,11 +62,11 @@ async def modi(text: Optional[str]=None):
 			f.close()
 
 	font = ImageFont.truetype("font.ttf", 18)
-	lines = textwrap.wrap(text, width=60)
+	lines = textwrap.wrap(url, width=60)
 	if len(lines) > 1:
 		draw.text((15, 62),"Only 60 character Allow.",fill="#604af0",font=font)
 	else:
-		draw.text((15, 57),text,fill="#14171a",font=font)
+		draw.text((15, 57),url,fill="#14171a",font=font)
 	img.save("hi.png")
 	file_like = open("./hi.png", mode="rb")
 	return StreamingResponse(file_like, media_type="image/png")
@@ -73,7 +74,7 @@ async def modi(text: Optional[str]=None):
 
 @app.get("/mia",response_class=FileResponse,tags=["Fake trump Tweet"])
 async def mia(text: Optional[str]=None):
-async def mia(url: Optional[str]=None):
+
 	try:
 		img = Image.open("./mis.png")
 	except Exception:
@@ -93,11 +94,11 @@ async def mia(url: Optional[str]=None):
 			f.close()
 
 	font = ImageFont.truetype("font.ttf", 20)
-	lines = textwrap.wrap(url, width=60)
+	lines = textwrap.wrap(text, width=60)
 	if len(lines) > 1:
 		draw.text((15, 62),"Only 60 character Allow.",fill="#604af0",font=font)
 	else:
-		draw.text((140, 140),url,fill="#000066",font=font)
+		draw.text((140, 140),text,fill="#000066",font=font)
 	img.save("hi.png")
 	file_like = open("./hi.png", mode="rb")
 	return StreamingResponse(file_like, media_type="image/png")
