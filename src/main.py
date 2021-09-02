@@ -57,7 +57,7 @@ async def modi(text: Optional[str]=None):
 		with open("font.ttf","rb") as font:
 			font.close()
 	except Exception:
-		font = requests.get("https://firebasestorage.googleapis.com/v0/b/predit-f5df7.appspot.com/o/font.ttf?alt=media&token=cf309e4a-b273-4598-9dba-c24ab9a0a889")
+		font = requests.get("https://firebasestorage.googleapis.com/v0/b/predit-f5df7.appspot.com/o/api%2Ffont.ttf?alt=media&token=b60345c8-17d9-4f82-ab8c-a12b59cb4b98")
 		with open('font.ttf', 'wb') as f:
 			f.write(font.content)
 			f.close()
