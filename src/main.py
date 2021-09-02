@@ -43,7 +43,7 @@ app.add_middleware(
 @app.get("/modi",response_class=FileResponse,tags=["Fake Modi Tweet"])
 async def modi(text: Optional[str]=None):
 	
-
+shadowcolor= "#4df6fb"
 	try:
 		img = Image.open("./blank.png")
 	except Exception:
@@ -68,8 +68,8 @@ async def modi(text: Optional[str]=None):
 		draw.text((300, 850),"Only 7 character Allow.",fill="#604af0",font=font)
 	else:
 		draw.text((300, 850),text,fill="#49dbdd",font=font, stroke_width=10, stroke_fill="#4bf4f9")
-		draw.text((299, 850),text,fill="#49dbdd",font=font,fill="#4df6fb")
-		draw.text((301, 850),text,fill="#49dbdd",font=font,fill="#4df6fb")
+		draw.text((299, 850),text,fill="#49dbdd",font=font,fill=shadowcolor)
+		draw.text((301, 850),text,fill="#49dbdd",font=font,fill=shadowcolor)
 		
 		
 		
