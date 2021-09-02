@@ -41,13 +41,13 @@ app.add_middleware(
 
 
 @app.get("/modi",response_class=FileResponse,tags=["Fake Modi Tweet"])
-async def modi(text: Optional[str]=None,url: Optional[str]=None):
-	burl = url
+async def modi(text: Optional[str]=None:
+	
 
 	try:
 		img = Image.open("./blank.png")
 	except Exception:
-		blank = requests.get(burl)
+		blank = requests.get("https://firebasestorage.googleapis.com/v0/b/predit-f5df7.appspot.com/o/20210902_135555.png?alt=media&token=b568ecb6-00e0-4402-9762-f70be784335a")
 		with open("blank.png","wb") as f:
 			f.write(blank.content)
 			f.close()
@@ -68,7 +68,7 @@ async def modi(text: Optional[str]=None,url: Optional[str]=None):
 		draw.text((15, 62),"Only 60 character Allow.",fill="#604af0",font=font)
 	else:
 		draw.text((15, 57),text,fill="#14171a",font=font)
-		draw.text((15, 57),burl,fill="#14171a",font=font)
+		
 	img.save("hi.png")
 	file_like = open("./hi.png", mode="rb")
 	return StreamingResponse(file_like, media_type="image/png")
