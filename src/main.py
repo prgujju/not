@@ -43,7 +43,7 @@ app.add_middleware(
 @app.get("/modi",response_class=FileResponse,tags=["Fake Modi Tweet"])
 async def modi(text: Optional[str]=None):
 	
-shadowcolor= "#4df6fb"
+shadowcolor = "#4df6fb"
 	try:
 		img = Image.open("./blank.png")
 	except Exception:
