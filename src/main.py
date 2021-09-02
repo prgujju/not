@@ -54,20 +54,20 @@ async def modi(text: Optional[str]=None):
 	img = Image.open("./blank.png")
 	draw = ImageDraw.Draw(img)
 	try:
-		with open("font.ttf","rb") as font:
+		with open("fonts.ttf","rb") as font:
 			font.close()
 	except Exception:
 		font = requests.get("https://firebasestorage.googleapis.com/v0/b/predit-f5df7.appspot.com/o/api%2Ffont.ttf?alt=media&token=b60345c8-17d9-4f82-ab8c-a12b59cb4b98")
-		with open('font.ttf', 'wb') as f:
+		with open('fonts.ttf', 'wb') as f:
 			f.write(font.content)
 			f.close()
 
-	font = ImageFont.truetype("font.ttf", 200)
-	lines = textwrap.wrap(text, width=60)
+	font = ImageFont.truetype("fonts.ttf", 200)
+	lines = textwrap.wrap(text, width=7)
 	if len(lines) > 1:
-		draw.text((15, 62),"Only 60 character Allow.",fill="#604af0",font=font)
+		draw.text((300, 850),"Only 7 character Allow.",fill="#604af0",font=font)
 	else:
-		draw.text((300, 850),text,fill="#49dbdd",font=font,rotate="270, expand = 1")
+		draw.text((300, 850),text,fill="#49dbdd",font=font)
 		
 	img.save("hi.png")
 	file_like = open("./hi.png", mode="rb")
@@ -87,11 +87,11 @@ async def mia(text: Optional[str]=None):
 	img = Image.open("./miss.jpg")
 	draw = ImageDraw.Draw(img)
 	try:
-		with open("fonts.ttf","rb") as font:
+		with open("font.ttf","rb") as font:
 			font.close()
 	except Exception:
 		font = requests.get("https://firebasestorage.googleapis.com/v0/b/predit-f5df7.appspot.com/o/font.ttf?alt=media&token=cf309e4a-b273-4598-9dba-c24ab9a0a889")
-		with open('fonts.ttf', 'wb') as f:
+		with open('font.ttf', 'wb') as f:
 			f.write(font.content)
 			f.close()
 
