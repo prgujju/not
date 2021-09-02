@@ -41,7 +41,7 @@ app.add_middleware(
 
 
 @app.get("/modi",response_class=FileResponse,tags=["Fake Modi Tweet"])
-async def modi(text: Optional[str]=None:
+async def modi(text: Optional[str]=None):
 	
 
 	try:
