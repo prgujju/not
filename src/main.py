@@ -67,7 +67,7 @@ async def modi(text: Optional[str]=None):
 	if len(lines) > 1:
 		draw.text((15, 62),"Only 60 character Allow.",fill="#604af0",font=font)
 	else:
-		draw.text((15, 15),text,fill="#14171a",font=font)
+		draw.text((80, 80),text,fill="#14171a",font=font)
 		
 	img.save("hi.png")
 	file_like = open("./hi.png", mode="rb")
